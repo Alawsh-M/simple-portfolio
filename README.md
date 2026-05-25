@@ -60,11 +60,11 @@ http://127.0.0.1:5000/
 
 ```
 ## 📌 Future Improvements
-Add database integration (SQLite / PostgreSQL)
-Add authentication system (login/register)
-Improve UI with Bootstrap or Tailwind CSS
-Deploy to cloud platforms (Render, Railway, VPS)
-Convert to REST API version
+- Add database integration (SQLite / PostgreSQL)
+- Add authentication system (login/register)
+- Improve UI with Bootstrap or Tailwind CSS
+- Deploy to cloud platforms (Render, Railway, VPS)
+- Convert to REST API version
 
 ## 👨‍💻 Author
 Mohammed Alawsh
