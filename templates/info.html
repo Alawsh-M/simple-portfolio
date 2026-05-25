@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111827;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      padding: 60px;
+    }
+
+    .box {
+      background: #1f2937;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    h2 {
+      color: #60a5fa;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    a {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>{{ info.degree }}</h2>
+      <p>{{ info.description }}</p>
+
+      <h3>Interests</h3>
+      <ul>
+        <li>{{ info['Area of interest']['interest-1'] }}</li>
+        <li>{{ info['Area of interest']['interest-2'] }}</li>
+        <li>{{ info['Area of interest']['interest-3'] }}</li>
+      </ul>
+
+      <a href="/skills">View Skills →</a>
+    </div>
+  </div>
+</body>
+</html>

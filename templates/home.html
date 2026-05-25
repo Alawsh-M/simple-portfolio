@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 40px;
+      border-radius: 16px;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #38bdf8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>{{ data.name }}</h1>
+      <p>{{ data.interest }}</p>
+      <a href="/info">Explore Profile</a>
+    </div>
+  </div>
+</body>
+</html>

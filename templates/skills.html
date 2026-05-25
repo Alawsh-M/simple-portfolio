@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skills</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0b1220;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      padding: 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    h3 {
+      color: #60a5fa;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Skills Overview</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <p>{{ skills['programming language'] }}</p>
+      </div>
+
+      <div class="card">
+        <h3>Frameworks</h3>
+        <p>{{ skills.framework }}</p>
+      </div>
+
+      <div class="card">
+        <h3>Tech Skills</h3>
+        <p>{{ skills['tech skill']['DSA'] }}</p>
+        <p>{{ skills['tech skill']['algorithm'] }}</p>
+        <p>{{ skills['tech skill']['DS'] }}</p>
+      </div>
+    </div>
+
+    <a href="/contact">Contact Me →</a>
+  </div>
+</body>
+</html>

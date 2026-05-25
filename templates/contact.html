@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+    }
+
+    .container {
+      padding: 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      width: 400px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #38bdf8;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .success {
+      background: #16a34a;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+
+      {% if reply %}
+        <div class="success">{{ reply }}</div>
+      {% endif %}
+
+      <form method="POST">
+        <input name="name" placeholder="Your Name" required>
+        <input name="phNO" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+      <div class="info">
+        <p>📞 {{ contact_info.phone }}</p>
+        <p>✉️ {{ contact_info.email }}</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
